@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="normalize.css" />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Document</title>
+    </head>
+    <body>
+        <main class="main">
+            <form class="form" action="https://echo.htmlacademy.ru" method="post">
+                <legend class="form__legend">Выбор сотрудника</legend>
+                <ul class="form__list">
+                    <li class="form__item">
+                        <label for="city">Выберите город</label>
+                        <select id="city" name="city" class="form__city">
+                            <option value="Moscow" select>Москва</option>
+                            <option value="London">Лондон</option>
+                            <option value="Paris">Париж</option>
+                            <option value="Dubai">Дубаи</option>
+                            <option value="Erevan">Ереван</option>
+                        </select>
+                    </li>
+                    <li class="form__item">
+                        <label for="workshop">Выберите цех</label>
+                        <select id="workshop" name="workshop" class="form__workshop">
+                            <option value="vegetable-shop" select>Овощной цех</option>
+                            <option value="confectionery-shop">Кондитерский цех</option>
+                            <option value="dairy-shop">Молочный цех</option>
+                            <option value="repair-shop">Ремонтный цех</option>
+                            <option value="butcher-shop">Мясной цех</option>
+                            <option value="dumpling-shop">Пельменный цех</option>
+                        </select>
+                    </li>
+                    <li class="form__item">
+                        <label for="employee">Выберите сотрудника</label>
+                        <select id="employee" name="employee" class="form__employee">
+                            <option value="Tverskaya" select>Тверская Мария Сергеевна</option>
+                            <option value="Zhukov">Жуков Борис Алексеевич</option>
+                            <option value="Dumskoy">Думской Петр Евгеньевич</option>
+                            <option value="Tretiakova">Третьякова Екатерина Григорьевна</option>
+                            <option value="Petrovsky">Петровский Роман Андреевич</option>
+                            <option value="Mokhovaya">Моховая Анастасия Сергеевна</option>
+                            <option value="Sadoviy">Садовый Глеб Аркадьевич</option>
+                            <option value="Gogol">Гоголь Аркадий Иванович</option>
+                            <option value="Pyatnitskaya">Пятницкая Мария Владимировна</option>
+                            <option value="Pushkinsky">Пушкинский Иван Иванович</option>
+                        </select>
+                    </li>
+                    <li class="form__item">
+                        <label for="brigade">Тип бригады</label>
+                        <select id="brigade" name="brigade">
+                            <option value="day" selected>Дневная</option>
+                            <option value="night">Ночная</option>
+                        </select>
+                    </li>
+                    <li class="form__item">
+                        <label for="shift">Выберите смену</label>
+                        <select id="shift" name="shift">
+                            <option value="day" selected>с 8:00 до 20:00</option>
+                            <option value="night">с 20:00 до 8:00</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class="form__buttons buttons">
+                    <button class="buttons__button-submit" type="submit">Отправить</button>
+                    <button class="buttons__button-reset" type="reset">Сбросить</button>
+                </div>
+            </form>
+            <div class="modal-window">
+                <span class="modal-window__close"></span>
+                <div class="modal-window__text"></div>
+            </div>
+        </main>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
