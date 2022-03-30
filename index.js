@@ -121,6 +121,7 @@ resetButton.addEventListener('click', () => {
     employee.innerHTML = employeeOptions.reduce((acc, i) => acc + i, '');
     brigade.value = 'day'
     shift.value = 'day';
+    modalWindow.style.display = 'none';
 });
 
 submitButton.addEventListener('click', (evt) => {
@@ -132,7 +133,14 @@ submitButton.addEventListener('click', (evt) => {
     document.cookie = encodeURIComponent(shift.name) + '=' + encodeURIComponent(shift.value);
 
     modalWindow.style.display = 'flex';
-    modalWindow.querySelector('.modal-window__text').textContent = document.cookie;
+    // modalWindow.querySelector('.modal-window__text').textContent = document.cookie;
+    const output = {};
+    document.cookie.split(';').forEach((item) => {
+        let keyValue = item.split('=');
+        output[keyValue[0]] = keyValue[1];
+    })
+    const json = JSON.stringify(output);
+    modalWindow.querySelector('.modal-window__text').textContent = json;
 })
 
 closeButton.addEventListener('click', () => {
